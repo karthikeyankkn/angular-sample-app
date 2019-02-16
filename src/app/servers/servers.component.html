@@ -1,3 +1,15 @@
-<app-server></app-server>
-
-<app-server></app-server>
+<button [disabled]='!allowNewServer' class="btn btn-primary" (click)="onCreateServer()">Test button</button>
+<p>String Interpulation: {{allowNewServer}}</p>
+Property Binding: <b [innerText]="allowNewServer"></b>
+<br>Server Status: <b>{{ serverCreationStatus }}</b>
+<br>
+<!-- <input type="text" name="" value="" class="form-control" (input)="onUpdateServerName($event)"> -->
+<hr>
+<!-- <p>{{ serverName }}</p> -->
+<hr>
+<input type="text" name="" value="" class="form-control" [(ngModel)]="serverName" />
+<hr>
+<h3>Practice two way binding</h3>
+<input type="text" name="" value="" class="form-control" [(ngModel)] = "userName">
+<p>{{ userName }}</p>
+<button type="button" name="button" class="btn btn-success">Reset</button>
