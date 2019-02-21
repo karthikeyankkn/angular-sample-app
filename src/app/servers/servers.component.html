@@ -12,4 +12,4 @@ Property Binding: <b [innerText]="allowNewServer"></b>
 <h3>Practice two way binding</h3>
 <input type="text" name="" value="" class="form-control" [(ngModel)] = "userName">
 <p>{{ userName }}</p>
-<button type="button" name="button" class="btn btn-success">Reset</button>
+<button type="button" name="button" class="btn btn-success" (click) = "userName = ''" [disabled]='!userName'>Reset</button>
